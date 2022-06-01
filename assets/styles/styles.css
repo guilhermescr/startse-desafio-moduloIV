@@ -40,6 +40,7 @@ body {
 body {
   font-size: 1.6rem;
 
+  position: relative;
   overflow: overlay;
 }
 
@@ -48,17 +49,32 @@ body::-webkit-scrollbar {
 }
 
 body::-webkit-scrollbar-track {
-  background: #313131;
+  background: #292929;
 }
 
 body::-webkit-scrollbar-thumb {
   background-color: var(--blue-shade-color);
   border-radius: 2rem;
-  border: 0.1rem solid #858585;
+  border: 0.2rem solid #0e0e0e;
 }
 
 .blue--highlight {
   color: #00ccff;
+}
+
+.white-section {
+  background-color: #f0f0f6;
+  padding: 7rem 3rem;
+  text-align: center;
+}
+
+.white-section__subtitle {
+  border-block: 0.2rem solid black;
+  color: #000;
+  text-align: center;
+  font: normal normal 4rem 'LeagueSpartan';
+  margin-bottom: 5rem;
+  padding-block: 2rem;
 }
 
 /* HEADER------------------------------------- */
@@ -100,6 +116,7 @@ body::-webkit-scrollbar-thumb {
   color: #fff;
   cursor: default;
   max-width: 50rem;
+  width: 100%;
 
   /* Typewriter Effect */
   overflow: hidden;
@@ -108,6 +125,7 @@ body::-webkit-scrollbar-thumb {
   margin: 0 auto;
   letter-spacing: 0.15em;
   animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+  animation-delay: 0.2s;
 }
 
 /* The typing effect */
@@ -212,18 +230,6 @@ span#author-name:hover {
 }
 
 /* SKILLS ------------------------------------- */
-#skills {
-  background-color: #F0F0F6;
-  padding: 10rem 3rem;
-  text-align: center;
-}
-#skills h2 {
-  color: #000;
-  text-align: center;
-  font: normal normal 4rem 'LeagueSpartan';
-  margin-bottom: 5rem;
-}
-
 .skills-items {
   display: flex;
   justify-content: center;
@@ -243,7 +249,7 @@ span#author-name:hover {
   max-height: 25rem;
   height: 22rem;
   cursor: pointer;
-  transition: .3s ease;
+  transition: 0.3s ease;
 }
 
 .skills-items .skill:hover {
@@ -252,17 +258,148 @@ span#author-name:hover {
   width: 33rem;
 }
 
-.skills-items .skill:hover > h3 {
-  color: #fff;
-  font-size: 3rem;
-}
-
 .skills-items .skill h3 {
   color: #000;
   font: normal bold 2.5rem 'Source Code Pro', monospace;
 }
 
+.skills-items .skill:hover > h3 {
+  color: #fff;
+  font-size: 3rem;
+}
+
 .skills-items .skill img {
   width: 15rem;
   margin-bottom: 2rem;
+}
+
+/* PROJECTS --------------------------------------- */
+#projects {
+  background: #f0f0f6 url('../images/background-opt-3.jpg') center no-repeat
+    fixed;
+  background-size: cover;
+}
+
+#projects .projects-items {
+  display: flex;
+  justify-content: center;
+  flex-flow: row wrap;
+  gap: 5rem;
+}
+
+#projects .projects-items .project {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+
+  background-color: #fff;
+  border: 0.2rem solid black;
+
+  max-width: 40rem;
+  width: 36rem;
+  max-height: 33rem;
+  height: 30rem;
+
+  cursor: pointer;
+  transition: 0.3s ease;
+  position: relative;
+}
+
+#projects .projects-items .project:hover {
+  background-color: #000;
+  height: 32rem;
+  width: 38rem;
+}
+
+#projects .projects-items .project h3 {
+  color: #000;
+  font: normal bold 2.5rem 'LeagueSpartan', monospace;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+#projects .projects-items .project:hover > h3 {
+  color: #fff;
+}
+
+#projects .projects-items .project a {
+  height: 30rem;
+  width: 100%;
+}
+
+#projects .projects-items .project img {
+  border: 0.1rem solid rgba(0, 0, 0, 0.4);
+  height: 23.8rem;
+  width: 100%;
+}
+
+/* RETURN BUTTON --------------------------------------- */
+@keyframes stretch {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0.9);
+  }
+}
+
+.hideBtn {
+  display: none;
+}
+
+#returnBtn {
+  background-color: var(--blue-shade-color);
+  border-radius: 50%;
+  height: 5rem;
+  width: 5rem;
+
+  position: fixed;
+  bottom: 1.5%;
+  right: 1.5%;
+
+  animation: stretch 2s infinite alternate;
+}
+
+#returnBtn img {
+  width: 100%;
+}
+
+/* MEDIA QUERIES --------------------------------------- */
+@media (max-width: 570px) {
+  .header-presentation h1#header-title {
+    font-size: 2.8rem;
+    text-align: center;
+    border-right: none;
+    max-width: 45rem;
+  }
+
+  .about-info {
+    flex-flow: column wrap;
+  }
+
+  .about-info .face-box img.author-face {
+    height: 20rem;
+    width: 20rem;
+  }
+
+  #projects .projects-items {
+    gap: 2rem;
+  }
+
+  #projects .projects-items .project {
+    height: 25rem;
+  }
+
+  #projects .projects-items .project h3 {
+    font-size: 2.2rem;
+  }
+
+  #projects .projects-items .project img {
+    height: 20rem;
+  }
+
+  #returnBtn {
+    right: 3.5%;
+  }
 }
