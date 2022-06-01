@@ -1,0 +1,268 @@
+/* RULES */
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@500;700&display=swap');
+
+@font-face {
+  font-family: 'LeagueSpartan';
+  src: url('../fonts/LeagueSpartan-Bold.otf') format('opentype');
+}
+
+/* GENERAL SETTINGS */
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  border: none;
+  box-sizing: border-box;
+  color: gold;
+}
+
+:root {
+  --blue-shade-color: #00ccff;
+  --about-txt-font: 'Montserrat', sans-serif;
+
+  font-size: 62.5%;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  font-size: 1.6rem;
+
+  overflow: overlay;
+}
+
+body::-webkit-scrollbar {
+  width: 1.2rem;
+}
+
+body::-webkit-scrollbar-track {
+  background: #313131;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: var(--blue-shade-color);
+  border-radius: 2rem;
+  border: 0.1rem solid #858585;
+}
+
+.blue--highlight {
+  color: #00ccff;
+}
+
+/* HEADER------------------------------------- */
+#header {
+  display: flex;
+  justify-content: center;
+  flex-flow: column wrap;
+  min-height: 100vh;
+  width: 100%;
+}
+
+#header .header-container {
+  background: purple url('../images/background-opt-2.jpg') center no-repeat
+    fixed;
+  background-size: cover;
+  min-height: 100vh;
+  width: 100%;
+  position: relative;
+}
+
+#header .header-container .header-presentation {
+  background-color: rgba(0, 0, 0, 0.4);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column wrap;
+  gap: 5rem;
+
+  margin: 0 auto;
+  min-height: 100vh;
+  width: 100%;
+}
+
+.header-presentation h1#header-title {
+  font-family: 'Source Code Pro', monospace;
+  font-size: 5rem;
+  line-height: 8rem;
+  color: #fff;
+  cursor: default;
+  max-width: 50rem;
+
+  /* Typewriter Effect */
+  overflow: hidden;
+  border-right: 0.15em solid #fff;
+  white-space: nowrap;
+  margin: 0 auto;
+  letter-spacing: 0.15em;
+  animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #fff;
+  }
+}
+
+.header-presentation h1#header-title span#author-name {
+  display: inline-block;
+  transition: 0.5s ease;
+  text-decoration: underline;
+}
+
+span#author-name:hover {
+  transform: translateY(-25%) rotate(1deg);
+}
+
+.header-presentation a {
+  display: inline-block;
+  border: 0.2rem solid #00ccff;
+  background-color: transparent;
+
+  max-height: fit-content;
+  max-width: fit-content;
+  margin: 0 auto;
+  padding: 1rem 3rem;
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 2rem;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+  text-align: center;
+  transition: 0.5s ease;
+}
+
+.header-presentation a:hover {
+  background-color: #00ccff;
+  color: #fff;
+  text-shadow: 0.3rem 0.12rem 0.5rem rgba(0, 0, 0, 0.4);
+  border-radius: 1rem;
+  transform: scale(1.3) rotate(-1deg);
+}
+
+/* ABOUT--------------------------------------- */
+#about {
+  background-color: #313131;
+
+  min-height: 100vh;
+  width: 100vw;
+  padding: 10rem 3rem;
+}
+
+#about .about-header {
+  width: 100%;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+#about .about-header #about-title {
+  color: var(--blue-shade-color);
+  text-align: center;
+  font: normal 500 4rem 'LeagueSpartan';
+}
+
+.about-info {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+
+  max-width: 90rem;
+  margin: 0 auto;
+}
+
+.about-info .face-box img.author-face {
+  height: 30rem;
+  width: 30rem;
+  background-image: linear-gradient(to right);
+  border-radius: 50%;
+}
+
+.about-info .about-txt p {
+  font: normal normal 1.5rem var(--about-txt-font);
+  color: #fff;
+}
+
+/* SKILLS ------------------------------------- */
+#skills {
+  background-color: #F0F0F6;
+  padding: 10rem 3rem;
+  text-align: center;
+}
+#skills h2 {
+  color: #000;
+  text-align: center;
+  font: normal normal 4rem 'LeagueSpartan';
+  margin-bottom: 5rem;
+}
+
+.skills-items {
+  display: flex;
+  justify-content: center;
+  flex-flow: row wrap;
+  gap: 5rem;
+}
+
+.skills-items .skill {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+
+  background-color: #fff;
+  max-width: 35rem;
+  width: 31rem;
+  max-height: 25rem;
+  height: 22rem;
+  cursor: pointer;
+  transition: .3s ease;
+}
+
+.skills-items .skill:hover {
+  background-color: #000;
+  height: 24rem;
+  width: 33rem;
+}
+
+.skills-items .skill:hover > h3 {
+  color: #fff;
+  font-size: 3rem;
+}
+
+.skills-items .skill h3 {
+  color: #000;
+  font: normal bold 2.5rem 'Source Code Pro', monospace;
+}
+
+.skills-items .skill img {
+  width: 15rem;
+  margin-bottom: 2rem;
+}
