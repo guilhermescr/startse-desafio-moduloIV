@@ -77,69 +77,6 @@ body::-webkit-scrollbar-thumb {
   padding-block: 2rem;
 }
 
-/* SOCIAL ------------------------------------- */
-
-.social {
-  background-image: linear-gradient(to right, #00ccff, #102d8d);
-  border-radius: 1rem 1rem 2rem 2rem;
-
-  height: 50vh;
-  width: 10vw;
-
-  position: fixed;
-  z-index: 10;
-  top: 23vh;
-  transform: translateX(-50%);
-  transition: .9s ease;
-}
-
-.social:hover {
-  transform: translateX(10%);
-}
-
-.social::after {
-  border-bottom: 0.1rem solid #f0f0f6;
-  content: 'Social';
-  color: #00ccff;
-  font: normal bold 2rem 'Source Code Pro', monospace;
-  letter-spacing: .2rem;
-
-  max-width: fit-content;
-
-  position: absolute;
-  top: 50%;
-  transform: translate(70%, -50%) rotate(90deg);
-}
-
-.social-icons {
-  display: flex;
-  flex-flow: column wrap;
-  justify-content: space-around;
-  align-items: center;
-
-  height: 100%;
-
-  position: relative;
-}
-
-.icon {
-  max-width: fit-content;
-
-  display: none;
-  cursor: pointer;
-  transition: .2s ease-in;
-  transform: scale(1.2);
-}
-
-.icon path {
-  fill: #fff;
-  stroke: rgba(0, 38, 255, 0.4);
-}
-
-.icon:hover {
-  transform: scale(1.6);
-}
-
 /* HEADER------------------------------------- */
 #header {
   display: flex;
@@ -371,7 +308,8 @@ span#author-name:hover {
 
 #projects .projects-items .project:hover {
   background-color: #000;
-  height: 33rem;
+  height: 32rem;
+  width: 38rem;
 }
 
 #projects .projects-items .project h3 {
@@ -394,11 +332,6 @@ span#author-name:hover {
   border: 0.1rem solid rgba(0, 0, 0, 0.4);
   height: 23.8rem;
   width: 100%;
-  transition: 0.3s ease;
-}
-
-#projects .projects-items .project:hover img {
-  height: 100%;
 }
 
 /* RETURN BUTTON --------------------------------------- */
