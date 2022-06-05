@@ -71,8 +71,10 @@ body::-webkit-scrollbar-thumb {
 .white-section__subtitle {
   border-block: 0.2rem solid black;
   color: #000;
-  text-align: center;
   font: normal normal 4rem 'LeagueSpartan';
+
+  text-align: center;
+  width: 100%;
   margin-bottom: 5rem;
   padding-block: 2rem;
 }
@@ -341,55 +343,18 @@ span#author-name:hover {
   color: #fff;
 }
 
-#about .skills-details {
-  display: flex;
-  flex-flow: column wrap;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;
-  max-height: max-content;
-}
-
-#about .skills-details .skill-info {
-  background-image: linear-gradient(180deg, #00ccff, #4672ac);
-  border-radius: 0.4rem;
-
-  display: flex;
-  flex-flow: column wrap;
-  justify-content: center;
-  align-items: center;
-
-  margin: 0 auto;
-  padding: 0.5rem 1rem;
-  max-width: 35rem;
-  width: 90%;
-
-  cursor: pointer;
-}
-
-#about .skills-details .skill-info:hover {
-  background-image: linear-gradient(180deg, #0076ad, #0e315f9d);
-  transform: scale(1.05);
-}
-
-#about .skills-details .skill-info h3 {
-  font: normal bold 2rem var(--about-txt-font);
-  color: #fff;
-}
-
-#about .skills-details .skill-info:hover h3 {
-  color: #f1f1f1;
-}
-
-#about .skills-details .skill-info .stars img {
-  height: 3rem;
-}
-
-#about .skills-details .skill-info:hover img {
-  opacity: 0.8;
-}
-
 /* SKILLS ------------------------------------- */
+
+#skills {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+
+  gap: 3rem;
+  width: 100%;
+}
+
 .skills-items {
   display: flex;
   justify-content: center;
@@ -431,6 +396,64 @@ span#author-name:hover {
   margin-bottom: 2rem;
 }
 
+#skills .skills-details {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+
+  max-height: max-content;
+  max-width: 80rem;
+  width: 100%;
+}
+
+#skills .skills-details .skill-info {
+  background-image: linear-gradient(180deg, #fff, #f0f0f0);
+  border-radius: 5rem;
+  border: 0.2rem solid #000;
+
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+
+  margin: 0 auto;
+  padding: 0.5rem 1rem;
+  max-width: 35rem;
+  width: 90%;
+
+  cursor: pointer;
+  transition: .3s ease;
+}
+
+#skills .skills-details .skill-info:hover {
+  background-image: linear-gradient(180deg, #000, #242424);
+  transform: scale(1.05);
+}
+
+#skills .skills-details .skill-info:nth-child(3) .stars img:nth-child(4) {
+  height: 2.5rem;
+}
+
+#skills .skills-details .skill-info h3 {
+  font: normal bold 2rem var(--about-txt-font);
+  color: #000;
+}
+
+#skills .skills-details .skill-info:hover h3 {
+  color: #fff;
+}
+
+#skills .skills-details .skill-info .stars {
+  display: flex;
+  align-items: center;
+}
+
+#skills .skills-details .skill-info .stars img {
+  height: 3rem;
+}
+
 /* PROJECTS --------------------------------------- */
 #projects {
   background: #f0f0f6 url('../images/background-opt-3.jpg') center no-repeat
@@ -466,7 +489,7 @@ span#author-name:hover {
 
 #projects .projects-items .project:hover {
   background-color: #000;
-  height: 33rem;
+  height: 31rem;
 }
 
 #projects .projects-items .project h3 {
@@ -626,6 +649,55 @@ span#author-name:hover {
   .about-info .face-box img.author-face {
     height: 20rem;
     width: 20rem;
+  }
+
+  #skills .skills-details {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+  
+    max-height: max-content;
+    max-width: 100%;
+    width: 100%;
+  }
+  
+  #skills .skills-details .skill-info {
+    background-image: linear-gradient(180deg, #fff, #f1f1f1de);
+    border-radius: 5rem;
+    border: 0.2rem solid #000;
+  
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+  
+    margin: 0 auto;
+    padding: 0.5rem 1rem;
+    max-width: 35rem;
+    width: 90%;
+  
+    cursor: pointer;
+    transition: .3s ease;
+  }
+  
+  #skills .skills-details .skill-info:hover {
+    background-image: linear-gradient(180deg, #000, #242424);
+    transform: scale(1.05);
+  }
+  
+  #skills .skills-details .skill-info h3 {
+    font: normal bold 2rem var(--about-txt-font);
+    color: #000;
+  }
+  
+  #skills .skills-details .skill-info:hover h3 {
+    color: #fff;
+  }
+  
+  #skills .skills-details .skill-info .stars img {
+    height: 3rem;
   }
 
   #projects .projects-items {
