@@ -305,7 +305,7 @@ span#author-name:hover {
 
   min-height: 100vh;
   width: 100vw;
-  padding: 7rem 3rem 3rem 3rem;
+  padding: 7rem 3rem;
 }
 
 #about .about-header {
@@ -678,6 +678,8 @@ span#author-name:hover {
   #about {
     display: flex;
     flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
     gap: 2rem;
   }
 
@@ -693,7 +695,7 @@ span#author-name:hover {
   #about .about-location {
     transform: translateY(100%);
     position: absolute;
-    bottom: -10%;
+    bottom: -5%;
     right: 0;
   }
 
