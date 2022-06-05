@@ -77,20 +77,68 @@ body::-webkit-scrollbar-thumb {
   padding-block: 2rem;
 }
 
+/* OTHERS ------------------------------------- */
+
+.resume-container {
+  background-color: rgb(255, 255, 255);
+  border-radius: 50rem;
+
+  padding: 0.3rem 1rem;
+
+  position: absolute;
+  z-index: 10;
+  top: 1%;
+  right: 3%;
+  transition: .3s ease;
+}
+
+.resume-container:hover {
+  background-color: rgb(0, 204, 255);
+}
+
+.resume-container a {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+
+  max-width: max-content;
+  transition: .3s ease;
+}
+
+.resume-container a:hover > .resume p, .resume-container a:hover > .download-resume svg path {
+  color: #fff;
+  fill: #fff;
+}
+
+.resume p {
+  font: normal normal 1.5rem 'LeagueSpartan', sans-serif;
+  color: #000;
+}
+
+.download-resume svg {
+  height: 2.3rem;
+}
+
+.download-resume svg path {
+  fill: #000;
+}
+
 /* SOCIAL ------------------------------------- */
 
 .social {
   background-image: linear-gradient(to right, #00ccff, #102d8d);
   border-radius: 1rem 1rem 2rem 2rem;
 
-  height: 50vh;
-  width: 10vw;
+  height: 30rem;
+  width: 10rem;
 
   position: fixed;
   z-index: 10;
   top: 23vh;
-  transform: translateX(-50%);
-  transition: .9s ease;
+  transform: translateX(-70%);
+  transition: .5s ease;
 }
 
 .social:hover {
@@ -108,7 +156,7 @@ body::-webkit-scrollbar-thumb {
 
   position: absolute;
   top: 50%;
-  transform: translate(70%, -50%) rotate(90deg);
+  transform: translate(90%, -50%) rotate(90deg);
 }
 
 .social-icons {
@@ -423,7 +471,7 @@ span#author-name:hover {
 
   position: fixed;
   bottom: 1.5%;
-  right: 1.5%;
+  right: 2%;
 
   animation: stretch 2s infinite alternate;
 }
@@ -433,7 +481,84 @@ span#author-name:hover {
 }
 
 /* MEDIA QUERIES --------------------------------------- */
-@media (max-width: 570px) {
+@media (max-width: 650px) {
+  .resume-container {
+    background-color: rgb(255, 255, 255);
+    border-radius: 50rem;
+
+    height: max-content;
+    padding: 0.3rem 1rem;
+
+    top: auto;
+    bottom: 2%;
+    right: 5%;
+  }
+
+  /* SOCIAL ------------------------------------- */
+  .social {
+    background-image: linear-gradient(to right, #00ccff, #102d8d);
+    border-radius: 1rem 1rem 2rem 2rem;
+
+    height: 10rem;
+    width: 30rem;
+
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -65%);
+    transition: .5s ease;
+  }
+
+  .social:hover {
+    transform: translate(-50%, 10%);
+  }
+
+  .social::after {
+    border-bottom: 0.1rem solid #f0f0f6;
+    content: 'Social';
+
+    color: #00ccff;
+    font: normal bold 2rem 'Source Code Pro', monospace;
+    letter-spacing: .2rem;
+  
+    max-width: fit-content;
+  
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+  }
+  
+  .social-icons {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+  
+    height: 100%;
+  
+    position: relative;
+  }
+  
+  .icon {
+    max-width: fit-content;
+  
+    display: none;
+    cursor: pointer;
+    transition: .2s ease-in;
+    transform: scale(1.2);
+  }
+  
+  .icon path {
+    fill: #fff;
+    stroke: rgba(0, 38, 255, 0.4);
+  }
+  
+  .icon:hover {
+    transform: scale(1.6);
+  }
+
   .header-presentation h1#header-title {
     font-size: 2.8rem;
     text-align: center;
