@@ -416,9 +416,9 @@ span#author-name:hover {
 
   background-color: #fff;
   max-width: 35rem;
-  width: 31rem;
+  width: 27rem;
   max-height: 25rem;
-  height: 22rem;
+  height: fit-content;
   cursor: pointer;
   transition: 0.3s ease;
 }
@@ -439,65 +439,36 @@ span#author-name:hover {
 
 .skills-items .skill img {
   width: 15rem;
-  margin-bottom: 2rem;
 }
 
-#skills .skills-details {
+#skills .skills-items .stars {
   display: flex;
-  flex-flow: row wrap;
   align-items: center;
   justify-content: center;
+  
+  margin-block: 1rem;
+}
+
+.skills-items .skill:hover .stars {
   gap: 1rem;
-
-  max-height: max-content;
-  max-width: 80rem;
-  width: 100%;
 }
 
-#skills .skills-details .skill-info {
-  background-image: linear-gradient(180deg, #fff, #f0f0f0);
-  border-radius: 5rem;
-  border: 0.2rem solid #000;
-
-  display: flex;
-  flex-flow: column wrap;
-  justify-content: center;
-  align-items: center;
-
-  margin: 0 auto;
-  padding: 0.5rem 1rem;
-  max-width: 35rem;
-  width: 90%;
-
-  cursor: pointer;
-  transition: 0.3s ease;
-}
-
-#skills .skills-details .skill-info:hover {
-  background-image: linear-gradient(180deg, #000, #242424);
-  transform: scale(1.05);
-}
-
-#skills .skills-details .skill-info:nth-child(3) .stars img:nth-child(4) {
-  height: 2.5rem;
-}
-
-#skills .skills-details .skill-info h3 {
-  font: normal bold 2rem var(--about-txt-font);
-  color: #000;
-}
-
-#skills .skills-details .skill-info:hover h3 {
-  color: #fff;
-}
-
-#skills .skills-details .skill-info .stars {
-  display: flex;
-  align-items: center;
-}
-
-#skills .skills-details .skill-info .stars img {
+#skills .skills-items .stars img.star {
   height: 3rem;
+  width: 3rem;
+}
+
+.skills-items .skill:hover .star {
+  transform: scale(1.2);
+}
+
+#skills .skills-items .stars .half-star {
+  height: 2.5rem !important;
+  width: 2.5rem !important;
+}
+
+.skills-items .skill:hover .half-star {
+  transform: scale(1.2);
 }
 
 /* PROJECTS --------------------------------------- */
